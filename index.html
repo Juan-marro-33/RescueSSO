@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rescue SSO</title>
+    <style>
+
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+
+
+        body, p, li {
+           line-height: 1.6;
+           }
+
+        img{
+            width:50%;
+            height: auto;
+        }
+
+
+        li {
+  margin-bottom: 0.5em;
+}
+ol {
+  margin-bottom: 1em;
+}
+
+section{
+    /* background-color: red; */
+}
+
+
+.important {
+  border-left: 6px solid #e65100;
+  background: #fffbe6;
+  padding: 1em 1.5em;
+  margin: 1em 0;
+  font-size: 1.07em;
+  color: #795548;
+}
+.galeria{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 5px;
+
+}
+
+    </style>
+</head>
+<body>
+    <h1>SSO Rescue Guide</h1>
+    <p>This is a quick guide how to set up Rescue SSO now that is self service</p>
+    <p>main article : <a href="https://support.logmein.com/rescue/help/introduction-to-rescue-saml-20?highlight=SSO" target="_blank">Introduction to Rescue SAML 2.0</a></p>
+
+    <h2>How to get Compnay ID</h2>
+    <ol>
+        <li> Log in to the  <a href="https://secure.logmeinrescue.com/" target="_blank">Rescue Admin Console.</a></li>
+        <ol> Admin console 
+            <li> <strong>Go to the upper right corner</strong>   and click on   &#8594  <strong>Global Settings.</strong></li>
+            <li> Upper rifht side to Global Settings </li>
+            <li>Scroll dow untill you find  &#8595 <strong>Single Sign-On</strong></li>
+            <li>On con example slide to right  &#8594  to find company ID </li>
+            <li>
+                <img src="imagesSSO/CompanyID.png" alt="">
+            </li>
+            <li>Company ID look like this <strong>CompanyID=3281466</strong></li>
+        </ol>
+    </ol>
+
+
+    <section>
+
+        <h2>How To Know the type of Customer</h2>
+        <div class="important">
+              <strong>Important:</strong>
+              This step is crucial because, before proceeding with account configuration, we need to clearly identify the type of account we are dealing with. Failing to do so can result in providing the incorrect configuration links to the client.
+        </div>
+                <ol>
+                    <li>
+                        check on Backoffice 
+                        <ul>
+                            <li><a href="">Backoffice US</a></li>
+                            <li><a href="">Backoffice EU</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        on backoffice  ➡️  settings  ➡️  Special Flag  ➡️  <strong>Enterprice account  ✅ </strong> 
+                    </li>
+                    <li>
+                        <img src="imagesSSO/Rescue-Flag.png" alt="">
+                    </li>
+                    <li>
+                        With that information, we should be able to determine the customer type, as well as whether they are in the EU or the US
+                        <ul>
+                            <li>Global customer US</li>
+                            <li>Global Enterprise customers US</li>
+                            <li>Customers based in the European Union</li>
+                            <li>Enterprise customers based in the European Union</li>
+                        </ul>
+                    </li>
+                </ol>
+    </section>
+
+    <section>
+        <h1>Configuring LogMeIn Rescue SAML 2.0 with Azure Active Directory</h1>
+        <ol>
+            <li>Log in to <a href="https://portal.azure.com " target="_blank">portal.azure.com </a></li>
+            <li>on Azure portal 
+                
+            </li>
+            <li>
+ <img src="./imagesSSO/portal-azure-1.png" alt="portal azure">
+            </li>
+            <li>
+                At the top of the page, there is a search bar. You can search for the keyword "Enterprise applications", or you can look for the icon with the same name ("Enterprise applications") in the Azure Services menu further down on the same screen.
+            </li>
+            <li>
+                <img src="imagesSSO/portal-azure-2.png" alt="portal azure">
+            </li>
+            <li>Enterprise Applications ➡️  New application  .</li>
+            
+            <li>
+                <img src="imagesSSO/portal-azure.4.png" alt="portal azure 4">
+            </li>
+            <li>The Add an application menu is displayed  ✅ </li>
+            <li class="galeria">
+                <img src="./imagesSSO/porta-azure-5.png" alt="portal azure ">
+                
+            </li>
+            <li>Select  ➡️  <Strong>+ create your own application</Strong></li>
+            <li>Enter a name for the new application ➡️  click "Add" ✅.  💡 <em>Leave all other settings at their default values.</em></li>
+            <li><img src="./imagesSSO/portal-azure-6.png" alt="portal azure"></li>
+            <li>now your aplication is created  you should see this screen ✅</li>
+            <li><img src="imagesSSO/portal-azure-7.png" alt="portal azure"></li>
+            <li>on Single sign-on ➡️ SAML-based sign-on.</li>
+            <li><img src="./imagesSSO/portal-azure-8.png" alt="portal azure"></li>
+            <li>Select  ➡️   <strong>SAML-based sign-on.</strong></li>
+            <li><img src="./imagesSSO/portal-azure-9.png" alt=""></li>
+            <li>Under  <strong>Basic SAML Configuration</strong>,set the following values:</li>
+            <li><img src="./imagesSSO/portal-azure-10.png" alt="portal azure"></li>
+            <li>select Edit</li>
+            <li><img src="./imagesSSO/portal-azure-11.png" alt="portal azure"></li>
+            
+    
+        </ol>
+    </section>
+    
+
+
+✅ Completed
+➡️ Next step
+⬅️ Go back
+⬆️ Scroll up
+⬇️ Scroll down
+   
+</body>
+</html>
